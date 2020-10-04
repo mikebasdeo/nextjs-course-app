@@ -1,12 +1,10 @@
 // pages/index.jsx
 /** @jsx jsx */
-import { jsx } from 'theme-ui'
+import { jsx, Spinner } from 'theme-ui'
 import Link from 'next/link'
 
 export default () => (
   <div sx={{ height: `calc(100vh - 60px)` }}>
-
-    
     <div
       sx={{
         variant: 'containers.page',
@@ -19,7 +17,5 @@ export default () => (
         This is a really dope note taking app.
       </h1>
     </div>
-
-
   </div>
 )
