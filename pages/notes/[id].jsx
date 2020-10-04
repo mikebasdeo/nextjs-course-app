@@ -1,5 +1,9 @@
-import React, { useEffect, useState } from 'react'
+/** @jsx jsx */
+
+import { useEffect, useState } from 'react'
+import { jsx } from 'theme-ui'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const IDGuy = () => {
   const [myState, setMyState] = useState('please pass an id')
@@ -19,19 +23,15 @@ const IDGuy = () => {
 
   useEffect(() => {
     if (myState !== undefined) {
-      console.log(`#ofUpdates${myState[0]}`)
-      console.log(`#ofUpdates${myState[1]}`)
-      console.log(`#ofUpdates${myState[2]}`)
+      console.log(`state: {${myState}} `)
     }
   }, [myState])
 
   const showStuff = () => {
     return (
-      <>
-        <h1>{myState[0]}</h1>
-        <h1>{myState[1]}</h1>
-        <h1>{myState[2]}</h1>
-      </>
+      <div sx={{ variant: 'containers.page' }}>
+        <h1>id: {myState} </h1>
+      </div>
     )
   }
 

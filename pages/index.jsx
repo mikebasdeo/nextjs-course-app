@@ -1,15 +1,25 @@
-import React from 'react'
+// pages/index.jsx
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import Link from 'next/link'
 
-const Page = () => (
-  <>
-    <h1>Hello Again</h1>
-    <p>Lorem Ipsum</p>
+export default () => (
+  <div sx={{ height: `calc(100vh - 60px)` }}>
 
-    <Link href='/notes'>
-      <a>Hello</a>
-    </Link>
-  </>
+    
+    <div
+      sx={{
+        variant: 'containers.page',
+        display: 'flex',
+        alignItems: 'center',
+        height: '100%',
+      }}
+    >
+      <h1 sx={{ fontSize: 8, my: 0 }}>
+        This is a really dope note taking app.
+      </h1>
+    </div>
+
+
+  </div>
 )
-
-export default Page
