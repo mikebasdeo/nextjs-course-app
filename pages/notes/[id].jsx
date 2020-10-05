@@ -1,6 +1,5 @@
-/** @jsx jsx */
-
 import { useEffect, useState } from 'react'
+/** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -9,15 +8,11 @@ const IDGuy = () => {
   const [myState, setMyState] = useState('please pass an id')
 
   const router = useRouter()
-  const { id } = router.query
-  // console.log(id)
 
-  // if (params !== myState) {
-  //   setMyState(params)
-  // }
 
   useEffect(() => {
-    console.log(id)
+    const { id } = router.query
+    // console.log(id)
     setMyState(id)
   }, [router])
 
