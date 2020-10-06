@@ -30,6 +30,17 @@ const Nav = () => (
       <Link href='/notes'>
         <a sx={{ color: 'text', fontSize: 3, cursor: 'pointer' }}>notes</a>
       </Link>
+
+      <a
+        sx={{
+          color: 'text',
+          fontSize: 3,
+          cursor: 'pointer',
+        }}
+        href={process.env.MY_SECRET}
+      >
+        Help
+      </a>
     </nav>
   </header>
 )

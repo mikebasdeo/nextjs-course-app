@@ -3,7 +3,7 @@
 import { jsx, Spinner } from 'theme-ui'
 import Link from 'next/link'
 
-export default () => (
+const Home = () => (
   <div
     sx={{
       height: `calc(100vh - 60px)`,
@@ -25,3 +25,5 @@ export default () => (
     </div>
   </div>
 )
+
+export default Home
