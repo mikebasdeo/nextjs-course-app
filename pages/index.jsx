@@ -27,3 +27,8 @@ const Home = () => (
 )
 
 export default Home
+
+export function getStaticProps(context) {
+  console.log(context)
+  return { props: {} }
+}

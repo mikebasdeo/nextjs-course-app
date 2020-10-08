@@ -8,11 +8,6 @@ const handler = nc()
   // add middleware to handler
   .use(cors())
 
-  // get one note => DELETE /api/note/:id
-  // .get((req, res) => {
-  //   res.json(notes)
-  // })
-
   // get all notes => GET /api/notes/
   .get((req, res) => {
     res.json({ data: notes })
@@ -29,6 +24,3 @@ const handler = nc()
   })
 
 export default handler
-
-// update note => PATCH /api/note/:id
-// delete note => DELETE /api/note/:id

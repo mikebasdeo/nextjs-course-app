@@ -21,9 +21,12 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "pages/index.jsx"
+    "**/*.tsx", "pages/index.jsx", "pages/find/index.jsx"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "files": [
+    "typings/myTypes.d.ts"
+]
 }
