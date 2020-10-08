@@ -2,10 +2,6 @@
 import nc from 'next-connect'
 import notes from '../../../src/data/data'
 
-export interface IncomingMessage {
-  query?: any
-}
-
 // sean!
 const getNote = (id) => notes.find((n) => n.id === parseInt(id))
 
