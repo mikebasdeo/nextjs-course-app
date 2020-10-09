@@ -6,5 +6,6 @@ declare module 'http' {
   interface ServerResponse {
     status: any
     json: any
+    send:any
   }
 }

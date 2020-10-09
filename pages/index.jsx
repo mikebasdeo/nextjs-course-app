@@ -2,8 +2,13 @@
 /** @jsx jsx */
 import { jsx, Spinner } from 'theme-ui'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+// import Browser from '../src/components/browser'
 
-const Home = () => (
+
+const BrowserComponent = dynamic(() => import('../src/components/browser'))
+
+const Home = ({ content }) => (
   <div
     sx={{
       height: `calc(100vh - 60px)`,
@@ -19,12 +24,21 @@ const Home = () => (
         border: '10px solid red',
       }}
     >
-      <h1 sx={{ fontSize: 8, my: 0 }}>
-        This is a really dope note taking app.
-      </h1>
+      <h1 sx={{ fontSize: 8, my: 0 }}>{content.title}</h1>
+      <BrowserComponent />
     </div>
   </div>
 )
 
 export default Home
 
+export function getStaticProps() {
+  //cms
+  return {
+    props: {
+      content: {
+        title: 'This is an adequate note taking app',
+      },
+    },
+  }
+}

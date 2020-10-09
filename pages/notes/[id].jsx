@@ -4,13 +4,13 @@ import { jsx } from 'theme-ui'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-const IDGuy = () => {
+const IDGuy = ({ note }) => {
   const [myState, setMyState] = useState('please pass an id')
 
   const router = useRouter()
 
   useEffect(() => {
-    const { id } = router.query
+    const { id } = note
     // console.log(id)
     setMyState(id)
   }, [router])
@@ -24,7 +24,8 @@ const IDGuy = () => {
   const showStuff = () => {
     return (
       <div sx={{ variant: 'containers.page' }}>
-        <h1>id: {myState} </h1>
+        <h1>{note.title} </h1>
+        <h1>{note.id} </h1>
       </div>
     )
   }
@@ -32,3 +33,19 @@ const IDGuy = () => {
   return myState ? showStuff() : <h1>Fuck you</h1>
 }
 export default IDGuy
+
+export async function getServerSideProps({ params, req, res }) {
+  const response = await fetch(`http://localhost:3000/api/notes/${params.id}`)
+
+  if (!response.ok) {
+    res.writeHead(302, { Location: '/notes' })
+    res.end()
+    return { props: {} }
+  }
+
+  const { data } = await response.json()
+
+  if (data) {
+    return { props: { note: data } }
+  }
+}

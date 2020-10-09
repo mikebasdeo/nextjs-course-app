@@ -22,7 +22,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", "pages/index.jsx", "pages/find/index.jsx", "pages/notes/[id].jsx", "pages/notes/index.jsx"
+    "**/*.tsx", "pages/index.jsx", "pages/find/index.jsx", "pages/notes/[id].jsx", "pages/notes/index.jsx", "src/components/browser.jsx", "src/components/browser.jsx"
   ],
   "exclude": [
     "node_modules"
