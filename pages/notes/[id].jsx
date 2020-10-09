@@ -9,7 +9,6 @@ const IDGuy = () => {
 
   const router = useRouter()
 
-
   useEffect(() => {
     const { id } = router.query
     // console.log(id)
@@ -32,5 +31,4 @@ const IDGuy = () => {
 
   return myState ? showStuff() : <h1>Fuck you</h1>
 }
-
 export default IDGuy

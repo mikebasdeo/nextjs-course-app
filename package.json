@@ -22,7 +22,8 @@
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
-    "@types/react": "^16.9.50",
+    "@types/node": "^14.11.5",
+    "@types/react": "^16.9.51",
     "@types/theme-ui": "^0.3.7",
     "typescript": "^4.0.3"
   }
